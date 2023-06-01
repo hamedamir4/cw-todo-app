@@ -83,7 +83,7 @@ pipeline {
                 sh 'ls -l'
                 sh 'ansible --version'
                 sh 'ansible-inventory --graph'
-                ansiblePlaybook credentialsId: 'tyler-team', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory_aws_ec2.yml', playbook: 'docker_project.yml'
+                ansiblePlaybook credentialsId: 'EC2-Test-Key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory_aws_ec2.yml', playbook: 'docker_project.yml'
              }
         }
 
